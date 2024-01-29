@@ -1,0 +1,6 @@
+error: 'Something went wrong'
+on(String date): 'on $date'
+publishedBy(String who): 'Published by $who'
+relatedArticles: 'View related articles'
+retry: 'Retry'
+title: 'Space Flight News'

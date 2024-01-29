@@ -1,0 +1,12 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    invalid_annotation_target: ignore
+  exclude:
+    - '**/*.config.dart'
+    - '**/*.freezed.dart'
+    - '**/*.g.dart'
+    - '**/*.gen.dart'
+    - '**/*.gr.dart'
+    - '**/*.i69n.dart'
