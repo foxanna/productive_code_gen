@@ -1,0 +1,7 @@
+**/*.g.dart linguist-generated
+**/*.freezed.dart linguist-generated
+**/*.config.dart linguist-generated
+**/*.gr.dart linguist-generated
+**/*.gen.dart linguist-generated
+**/*.i69n.dart linguist-generated
+**/feature/*_test.dart linguist-generated
