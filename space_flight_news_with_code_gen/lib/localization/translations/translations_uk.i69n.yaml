@@ -1,0 +1,6 @@
+error: 'Щось пішло не за планом'
+on(String date): '$date'
+publishedBy(String who): 'Оприлюднено $who'
+relatedArticles: 'Переглянути повʼязані новини'
+retry: 'Спробувати ще'
+title: 'Новини космічних польотів'
