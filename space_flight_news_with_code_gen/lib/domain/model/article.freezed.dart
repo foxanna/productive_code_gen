@@ -28,6 +28,7 @@ mixin _$Article {
   Uri? get image => throw _privateConstructorUsedError;
   String? get newsSite => throw _privateConstructorUsedError;
   String? get summary => throw _privateConstructorUsedError;
+  String? get test => throw _privateConstructorUsedError;
   DateTime? get publishedAt => throw _privateConstructorUsedError;
   List<SpaceLaunch> get launches => throw _privateConstructorUsedError;
 
@@ -48,6 +49,7 @@ abstract class $ArticleCopyWith<$Res> {
       @JsonKey(name: 'imageUrl') Uri? image,
       String? newsSite,
       String? summary,
+      String? test,
       DateTime? publishedAt,
       List<SpaceLaunch> launches});
 }
@@ -71,6 +73,7 @@ class _$ArticleCopyWithImpl<$Res, $Val extends Article>
     Object? image = freezed,
     Object? newsSite = freezed,
     Object? summary = freezed,
+    Object? test = freezed,
     Object? publishedAt = freezed,
     Object? launches = null,
   }) {
@@ -99,6 +102,10 @@ class _$ArticleCopyWithImpl<$Res, $Val extends Article>
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String?,
+      test: freezed == test
+          ? _value.test
+          : test // ignore: cast_nullable_to_non_nullable
+              as String?,
       publishedAt: freezed == publishedAt
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
@@ -125,6 +132,7 @@ abstract class _$$ArticleImplCopyWith<$Res> implements $ArticleCopyWith<$Res> {
       @JsonKey(name: 'imageUrl') Uri? image,
       String? newsSite,
       String? summary,
+      String? test,
       DateTime? publishedAt,
       List<SpaceLaunch> launches});
 }
@@ -146,6 +154,7 @@ class __$$ArticleImplCopyWithImpl<$Res>
     Object? image = freezed,
     Object? newsSite = freezed,
     Object? summary = freezed,
+    Object? test = freezed,
     Object? publishedAt = freezed,
     Object? launches = null,
   }) {
@@ -174,6 +183,10 @@ class __$$ArticleImplCopyWithImpl<$Res>
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String?,
+      test: freezed == test
+          ? _value.test
+          : test // ignore: cast_nullable_to_non_nullable
+              as String?,
       publishedAt: freezed == publishedAt
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
@@ -196,6 +209,7 @@ class _$ArticleImpl implements _Article {
       @JsonKey(name: 'imageUrl') this.image,
       this.newsSite,
       this.summary,
+      this.test,
       this.publishedAt,
       final List<SpaceLaunch> launches = const []})
       : _launches = launches;
@@ -218,6 +232,8 @@ class _$ArticleImpl implements _Article {
   @override
   final String? summary;
   @override
+  final String? test;
+  @override
   final DateTime? publishedAt;
   final List<SpaceLaunch> _launches;
   @override
@@ -230,7 +246,7 @@ class _$ArticleImpl implements _Article {
 
   @override
   String toString() {
-    return 'Article(id: $id, title: $title, url: $url, image: $image, newsSite: $newsSite, summary: $summary, publishedAt: $publishedAt, launches: $launches)';
+    return 'Article(id: $id, title: $title, url: $url, image: $image, newsSite: $newsSite, summary: $summary, test: $test, publishedAt: $publishedAt, launches: $launches)';
   }
 
   @override
@@ -245,6 +261,7 @@ class _$ArticleImpl implements _Article {
             (identical(other.newsSite, newsSite) ||
                 other.newsSite == newsSite) &&
             (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.test, test) || other.test == test) &&
             (identical(other.publishedAt, publishedAt) ||
                 other.publishedAt == publishedAt) &&
             const DeepCollectionEquality().equals(other._launches, _launches));
@@ -252,8 +269,17 @@ class _$ArticleImpl implements _Article {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, title, url, image, newsSite,
-      summary, publishedAt, const DeepCollectionEquality().hash(_launches));
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      title,
+      url,
+      image,
+      newsSite,
+      summary,
+      test,
+      publishedAt,
+      const DeepCollectionEquality().hash(_launches));
 
   @JsonKey(ignore: true)
   @override
@@ -277,6 +303,7 @@ abstract class _Article implements Article {
       @JsonKey(name: 'imageUrl') final Uri? image,
       final String? newsSite,
       final String? summary,
+      final String? test,
       final DateTime? publishedAt,
       final List<SpaceLaunch> launches}) = _$ArticleImpl;
 
@@ -296,6 +323,8 @@ abstract class _Article implements Article {
   String? get newsSite;
   @override
   String? get summary;
+  @override
+  String? get test;
   @override
   DateTime? get publishedAt;
   @override
