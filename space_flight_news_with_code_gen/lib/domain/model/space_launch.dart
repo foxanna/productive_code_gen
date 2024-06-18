@@ -7,6 +7,7 @@ part 'space_launch.g.dart';
 class SpaceLaunch with _$SpaceLaunch {
   const factory SpaceLaunch({
     required String id,
+    String? test,
   }) = _SpaceLaunch;
 
   factory SpaceLaunch.fromJson(Map<String, dynamic> json) =>
