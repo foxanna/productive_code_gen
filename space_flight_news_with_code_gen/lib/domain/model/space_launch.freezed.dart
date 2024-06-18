@@ -21,6 +21,7 @@ SpaceLaunch _$SpaceLaunchFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SpaceLaunch {
   String get id => throw _privateConstructorUsedError;
+  String? get test => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +35,7 @@ abstract class $SpaceLaunchCopyWith<$Res> {
           SpaceLaunch value, $Res Function(SpaceLaunch) then) =
       _$SpaceLaunchCopyWithImpl<$Res, SpaceLaunch>;
   @useResult
-  $Res call({String id});
+  $Res call({String id, String? test});
 }
 
 /// @nodoc
@@ -51,12 +52,17 @@ class _$SpaceLaunchCopyWithImpl<$Res, $Val extends SpaceLaunch>
   @override
   $Res call({
     Object? id = null,
+    Object? test = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      test: freezed == test
+          ? _value.test
+          : test // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -69,7 +75,7 @@ abstract class _$$SpaceLaunchImplCopyWith<$Res>
       __$$SpaceLaunchImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id});
+  $Res call({String id, String? test});
 }
 
 /// @nodoc
@@ -84,12 +90,17 @@ class __$$SpaceLaunchImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
+    Object? test = freezed,
   }) {
     return _then(_$SpaceLaunchImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      test: freezed == test
+          ? _value.test
+          : test // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -97,17 +108,19 @@ class __$$SpaceLaunchImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$SpaceLaunchImpl implements _SpaceLaunch {
-  const _$SpaceLaunchImpl({required this.id});
+  const _$SpaceLaunchImpl({required this.id, this.test});
 
   factory _$SpaceLaunchImpl.fromJson(Map<String, dynamic> json) =>
       _$$SpaceLaunchImplFromJson(json);
 
   @override
   final String id;
+  @override
+  final String? test;
 
   @override
   String toString() {
-    return 'SpaceLaunch(id: $id)';
+    return 'SpaceLaunch(id: $id, test: $test)';
   }
 
   @override
@@ -115,12 +128,13 @@ class _$SpaceLaunchImpl implements _SpaceLaunch {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SpaceLaunchImpl &&
-            (identical(other.id, id) || other.id == id));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.test, test) || other.test == test));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id);
+  int get hashCode => Object.hash(runtimeType, id, test);
 
   @JsonKey(ignore: true)
   @override
@@ -137,13 +151,16 @@ class _$SpaceLaunchImpl implements _SpaceLaunch {
 }
 
 abstract class _SpaceLaunch implements SpaceLaunch {
-  const factory _SpaceLaunch({required final String id}) = _$SpaceLaunchImpl;
+  const factory _SpaceLaunch({required final String id, final String? test}) =
+      _$SpaceLaunchImpl;
 
   factory _SpaceLaunch.fromJson(Map<String, dynamic> json) =
       _$SpaceLaunchImpl.fromJson;
 
   @override
   String get id;
+  @override
+  String? get test;
   @override
   @JsonKey(ignore: true)
   _$$SpaceLaunchImplCopyWith<_$SpaceLaunchImpl> get copyWith =>
