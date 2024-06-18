@@ -14,6 +14,7 @@ class Article with _$Article {
     @JsonKey(name: 'imageUrl') Uri? image,
     String? newsSite,
     String? summary,
+    String? test,
     DateTime? publishedAt,
     @Default([]) List<SpaceLaunch> launches,
   }) = _Article;

@@ -16,6 +16,7 @@ _$ArticleImpl _$$ArticleImplFromJson(Map<String, dynamic> json) =>
           : Uri.parse(json['imageUrl'] as String),
       newsSite: json['newsSite'] as String?,
       summary: json['summary'] as String?,
+      test: json['test'] as String?,
       publishedAt: json['publishedAt'] == null
           ? null
           : DateTime.parse(json['publishedAt'] as String),
@@ -41,6 +42,7 @@ Map<String, dynamic> _$$ArticleImplToJson(_$ArticleImpl instance) {
   writeNotNull('imageUrl', instance.image?.toString());
   writeNotNull('newsSite', instance.newsSite);
   writeNotNull('summary', instance.summary);
+  writeNotNull('test', instance.test);
   writeNotNull('publishedAt', instance.publishedAt?.toIso8601String());
   val['launches'] = instance.launches.map((e) => e.toJson()).toList();
   return val;
